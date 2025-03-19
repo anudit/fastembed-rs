@@ -33,6 +33,8 @@ pub enum EmbeddingModel {
     NomicEmbedTextV15,
     /// Quantized v1.5 nomic-ai/nomic-embed-text-v1.5
     NomicEmbedTextV15Q,
+    /// anudit/nomic-embed-text-v2-moe
+    NomicEmbedTextV2,
     /// sentence-transformers/paraphrase-MiniLM-L6-v2
     ParaphraseMLMiniLML12V2,
     /// Quantized sentence-transformers/paraphrase-MiniLM-L6-v2
@@ -165,6 +167,14 @@ fn init_models_map() -> HashMap<EmbeddingModel, ModelInfo<EmbeddingModel>> {
             dim: 768,
             description: String::from("v1.5 release of the 8192 context length english model"),
             model_code: String::from("nomic-ai/nomic-embed-text-v1.5"),
+            model_file: String::from("onnx/model.onnx"),
+            additional_files: Vec::new(),
+        },
+        ModelInfo {
+            model: EmbeddingModel::NomicEmbedTextV2,
+            dim: 768,
+            description: String::from("nomic-embed-text-v2-moe is a SoTA multilingual MoE text embedding model that excels at multilingual retrieval."),
+            model_code: String::from("anudit/nomic-embed-text-v2-moe"),
             model_file: String::from("onnx/model.onnx"),
             additional_files: Vec::new(),
         },

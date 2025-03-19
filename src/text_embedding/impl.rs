@@ -175,6 +175,7 @@ impl TextEmbedding {
             EmbeddingModel::NomicEmbedTextV1 => Some(Pooling::Mean),
             EmbeddingModel::NomicEmbedTextV15 => Some(Pooling::Mean),
             EmbeddingModel::NomicEmbedTextV15Q => Some(Pooling::Mean),
+            EmbeddingModel::NomicEmbedTextV2 => Some(Pooling::Mean),
 
             EmbeddingModel::ParaphraseMLMiniLML12V2 => Some(Pooling::Mean),
             EmbeddingModel::ParaphraseMLMiniLML12V2Q => Some(Pooling::Mean),
